@@ -1,9 +1,9 @@
 /* ==========================================================================
-   VerveStone Surfaces & DAP Products - Application Logic & Quote Cart
+   VerveStone & DAP Professional Surfaces - Logic & Bema Stone Quote Tray
    ========================================================================== */
 
 const PRODUCTS = [
-  // Natural Stone & Marble Products
+  // Natural Stone & Marble Products (Bema Stone Style)
   {
     id: 'prod-1',
     title: 'Calacatta Gold Sovereign Marble',
@@ -14,12 +14,12 @@ const PRODUCTS = [
     unitLabel: '/ sq. ft.',
     rating: 4.9,
     image: 'images/marble_calacatta.jpg',
-    badge: 'Best Seller',
+    badge: 'BEMA SELECT',
     origin: 'Carrara, Italy',
-    sizes: '24"x24", 12"x24", Custom Slabs',
+    sizes: '24"x24", 12"x24", Slabs',
     waterAbsorption: '0.12%',
     recommendedUse: 'Interior Floors, Accent Walls, Bathroom Vanities',
-    description: 'Ultra-luxurious Italian marble with luminous warm ivory white base and dramatic golden-grey veining.'
+    description: 'Ultra-luxurious Italian marble with luminous warm white base and golden-grey veining.'
   },
   {
     id: 'prod-2',
@@ -31,12 +31,12 @@ const PRODUCTS = [
     unitLabel: '/ sq. ft.',
     rating: 4.8,
     image: 'images/travertine_silver.jpg',
-    badge: 'Popular',
+    badge: 'POPULAR',
     origin: 'Denizli, Turkey',
     sizes: '12"x24", 16"x24", French Pattern',
     waterAbsorption: '0.45%',
     recommendedUse: 'Indoor Flooring, Pool Decks, Feature Walls',
-    description: 'Sleek contemporary natural travertine featuring linear slate grey, graphite, and taupe strata.'
+    description: 'Sleek contemporary natural travertine featuring linear slate grey and taupe strata.'
   },
   {
     id: 'prod-3',
@@ -48,7 +48,7 @@ const PRODUCTS = [
     unitLabel: '/ sq. ft.',
     rating: 5.0,
     image: 'images/nero_marquina.jpg',
-    badge: 'Luxury Select',
+    badge: 'LUXURY',
     origin: 'Markina, Spain',
     sizes: '24"x24", 18"x18", Slabs',
     waterAbsorption: '0.18%',
@@ -65,11 +65,11 @@ const PRODUCTS = [
     unitLabel: '/ sq. ft.',
     rating: 4.7,
     image: 'images/porcelain_statuario.jpg',
-    badge: 'Low Maintenance',
+    badge: 'SLAB FORMAT',
     origin: 'Modena, Italy',
     sizes: '48"x96", 32"x64"',
     waterAbsorption: '0.05%',
-    recommendedUse: 'Showers, Wall Cladding, High Traffic Commercial',
+    recommendedUse: 'Showers, Wall Cladding, Commercial',
     description: 'Ultra-durable large format porcelain slab replicating rare Statuario marble with zero maintenance.'
   },
   {
@@ -82,15 +82,32 @@ const PRODUCTS = [
     unitLabel: '/ sq. ft.',
     rating: 4.9,
     image: 'images/mosaic_herringbone.jpg',
-    badge: 'Artisan Tile',
-    origin: 'Waterjet Crafted',
+    badge: 'WATERJET',
+    origin: 'Artisan Crafted',
     sizes: '12"x12" Mesh Sheet',
     waterAbsorption: '0.15%',
     recommendedUse: 'Kitchen Backsplash, Shower Niche, Accent Border',
     description: 'Precision waterjet herringbone mosaic featuring white Carrara marble intertwined with brushed brass inlay.'
   },
+  {
+    id: 'prod-6',
+    title: 'Walnut Antique French Pattern Pavers',
+    category: 'travertine',
+    finish: 'Chiseled Tumbled',
+    thickness: '1-1/4" (30mm)',
+    pricePerSqFt: 9.75,
+    unitLabel: '/ sq. ft.',
+    rating: 4.8,
+    image: 'images/french_pattern_paver.jpg',
+    badge: 'OUTDOOR',
+    origin: 'Denizli, Turkey',
+    sizes: 'French Pattern (4 Sizes)',
+    waterAbsorption: '0.50%',
+    recommendedUse: 'Patio, Pool Deck, Courtyard Pavers',
+    description: 'Timeless Mediterranean outdoor travertine pavers with rich honey, chestnut, and walnut tones.'
+  },
 
-  // NEW DAP PRODUCTS (Adhesives, Caulks & Sealants)
+  // DAP PRODUCTS (Official Caulks, Adhesives & Sealants)
   {
     id: 'dap-1',
     title: 'DAP ALEX PLUS Acrylic Latex Caulk w/ Silicone',
@@ -101,13 +118,13 @@ const PRODUCTS = [
     unitLabel: '/ tube',
     rating: 4.9,
     image: 'images/dap_alex_plus.jpg',
-    badge: 'DAP Original',
+    badge: 'DAP ORIGINAL',
     isDap: true,
     origin: 'DAP Products Inc, USA',
     sizes: '10.1 fl oz Tube',
     waterAbsorption: '100% Waterproof',
     recommendedUse: 'Window & Door Frames, Crown Molding, Baseboards, Tile Gaps',
-    description: 'America’s #1 selling caulk. Superior flexibility, paintable in 30 minutes, mildew resistant sealant for stone & tile installations.'
+    description: 'America’s #1 selling caulk. Superior flexibility, paintable in 30 minutes, mildew resistant sealant for stone & tile.'
   },
   {
     id: 'dap-2',
@@ -119,35 +136,35 @@ const PRODUCTS = [
     unitLabel: '/ tube',
     rating: 4.8,
     image: 'images/dap_sealant.jpg',
-    badge: 'DAP Heavy Duty',
+    badge: 'DAP HEAVY DUTY',
     isDap: true,
     origin: 'DAP Products Inc, USA',
     sizes: '10.8 fl oz Tube',
     waterAbsorption: 'Submersible Waterproof',
     recommendedUse: 'Exterior Travertine Joints, Pool Coping Grout, Masonry',
-    description: 'Delivers silicone performance with latex ease of use. Outstanding flexibility and adhesion to natural stone, marble, and concrete.'
+    description: 'Delivers silicone performance with latex ease of use. Outstanding flexibility and adhesion to natural stone and marble.'
   },
   {
     id: 'dap-3',
     title: 'DAP KWIK SEAL Kitchen & Bath Adhesive Caulk',
     category: 'dap-sealants',
-    finish: 'Gloss White / Clear',
+    finish: 'Gloss White',
     thickness: '5.5 oz Squeeze Tube',
     pricePerSqFt: 5.79,
     unitLabel: '/ tube',
     rating: 4.9,
     image: 'images/dap_alex_plus.jpg',
-    badge: 'Bath & Tile',
+    badge: 'DAP BATH & TILE',
     isDap: true,
     origin: 'DAP Products Inc, USA',
     sizes: '5.5 fl oz Tube',
     waterAbsorption: '100% Mold & Mildew Proof',
     recommendedUse: 'Marble Tub Surrounds, Granite Vanities, Tile Backsplashes',
-    description: 'Specially formulated for kitchen and bath applications. Cures to a durable watertight seal that prevents mold & bacterial growth.'
+    description: 'Specially formulated for kitchen and bath applications. Cures to a durable watertight seal that prevents mold growth.'
   },
   {
     id: 'dap-4',
-    title: 'DAP Beats The Nails Heavy Duty Construction Adhesive',
+    title: 'DAP Beats The Nails Heavy Duty Stone Adhesive',
     category: 'dap-sealants',
     finish: 'High Tack Bond',
     thickness: '10.3 oz Cartridge',
@@ -155,13 +172,13 @@ const PRODUCTS = [
     unitLabel: '/ tube',
     rating: 5.0,
     image: 'images/dap_sealant.jpg',
-    badge: 'Stone Bond',
+    badge: 'DAP STONE BOND',
     isDap: true,
     origin: 'DAP Products Inc, USA',
     sizes: '10.3 fl oz Cartridge',
-    waterAbsorption: 'Weatherproof Instant Grab',
+    waterAbsorption: 'Weatherproof Grab',
     recommendedUse: 'Heavy Marble Wall Cladding, Travertine Paver Bonding',
-    description: 'Professional grade high-strength construction adhesive specifically formulated to bond heavy natural stone slabs and tiles without sagging.'
+    description: 'Professional grade high-strength construction adhesive specifically formulated to bond heavy natural stone slabs and tiles.'
   }
 ];
 
@@ -170,11 +187,12 @@ let currentCategory = 'all';
 let currentFinish = 'all';
 let searchQuery = '';
 let sortBy = 'popular';
-let cartItems = []; // Bema Stone style Cart / Quote Tray state
+let cartItems = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCatalog();
   setupEventListeners();
+  updateCartUI();
 });
 
 // Render Catalog Grid
@@ -199,14 +217,14 @@ function renderCatalog() {
     filtered.sort((a, b) => b.rating - a.rating);
   }
 
-  if (countEl) countEl.innerText = `${filtered.length} Products & Sealants Available`;
+  if (countEl) countEl.innerText = `${filtered.length} Natural Stone & DAP Products Available`;
 
   if (filtered.length === 0) {
     grid.innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-dim);">
-        <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 16px; color: var(--primary-blue);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <h3>No matching products found</h3>
-        <p style="margin-top: 8px;">Try clearing filters or searching for "DAP", "Marble" or "Travertine".</p>
+        <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 16px; color: var(--bema-blue);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <h3>No matching items found</h3>
+        <p style="margin-top: 8px;">Try searching for "DAP", "Marble" or "Travertine".</p>
       </div>
     `;
     return;
@@ -216,7 +234,7 @@ function renderCatalog() {
     <div class="product-card" data-id="${product.id}">
       <div class="product-thumb">
         <img src="${product.image}" alt="${product.title}" loading="lazy">
-        <span class="product-tag ${product.isDap ? 'dap-tag' : ''}">${product.badge || 'Premium'}</span>
+        <span class="product-tag ${product.isDap ? 'dap-tag' : ''}">${product.badge || 'BEMA SELECT'}</span>
         <div class="product-quick-view">
           <button onclick="openProductModal('${product.id}')">🔍 Quick View & Technical Specs</button>
         </div>
@@ -236,7 +254,7 @@ function renderCatalog() {
             $${product.pricePerSqFt.toFixed(2)} <small>${product.unitLabel || '/ sq ft'}</small>
           </div>
           <button class="btn-add-quote" onclick="addToQuoteCart('${product.id}')">
-            🛒 + Add to Quote Tray
+            🛒 + Quote Tray
           </button>
         </div>
       </div>
@@ -284,7 +302,7 @@ function setupEventListeners() {
   if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      showToast('✨ Thank you! Your custom project quote request has been submitted. Our team will contact you within 2 hours.');
+      showToast('✨ Thank you! Your Bema Stone project quote request has been submitted. Our team will contact you within 2 hours.');
       quoteForm.reset();
     });
   }
@@ -306,7 +324,7 @@ function addToQuoteCart(productId) {
   }
   updateCartUI();
   toggleDrawer(true);
-  showToast(`🛒 Added "${product.title}" to your Bema Stone Quote Tray!`);
+  showToast(`🛒 Added "${product.title}" to Bema Stone Quote Tray!`);
 }
 
 function updateCartQuantity(productId, delta) {
@@ -322,25 +340,29 @@ function updateCartQuantity(productId, delta) {
 
 function updateCartUI() {
   const badge = document.getElementById('cartBadge');
+  const bottomBadge = document.getElementById('bottomCartBadge');
   const drawerItems = document.getElementById('drawerItems');
   const cartSubtotalEl = document.getElementById('cartSubtotal');
   const cartEstTotalEl = document.getElementById('cartEstTotal');
+  const bottomTotalEl = document.getElementById('bottomTotal');
 
   const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   if (badge) badge.innerText = totalCount;
+  if (bottomBadge) bottomBadge.innerText = totalCount;
 
   const subtotal = cartItems.reduce((sum, item) => sum + (item.pricePerSqFt * item.quantity), 0);
 
   if (cartSubtotalEl) cartSubtotalEl.innerText = `$${subtotal.toFixed(2)}`;
   if (cartEstTotalEl) cartEstTotalEl.innerText = `$${(subtotal * 1.05).toFixed(2)}`;
+  if (bottomTotalEl) bottomTotalEl.innerText = `$${subtotal.toFixed(2)}`;
 
   if (drawerItems) {
     if (cartItems.length === 0) {
       drawerItems.innerHTML = `
         <div style="text-align: center; padding: 50px 10px; color: var(--text-dim);">
-          <svg width="50" height="50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 12px; color: var(--primary-blue);"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-          <h4 style="color: var(--dark-blue);">Your Quote Tray is Empty</h4>
-          <p style="font-size: 0.85rem; margin-top: 6px;">Browse natural stone or DAP products and click "+ Add to Quote Tray" to build your custom order.</p>
+          <svg width="50" height="50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 12px; color: var(--bema-blue);"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <h4 style="color: var(--navy-dark);">Your Bema Stone Quote Tray is Empty</h4>
+          <p style="font-size: 0.85rem; margin-top: 6px;">Add natural stone tiles or DAP caulks/adhesives to request a direct factory quote.</p>
         </div>
       `;
     } else {
@@ -354,7 +376,7 @@ function updateCartUI() {
               <button class="qty-btn" onclick="updateCartQuantity('${item.id}', -1)">-</button>
               <span class="qty-val">${item.quantity}</span>
               <button class="qty-btn" onclick="updateCartQuantity('${item.id}', 1)">+</button>
-              <span style="margin-left: auto; font-weight:700; color:var(--primary-blue); font-size:0.9rem;">
+              <span style="margin-left: auto; font-weight:800; color:var(--bema-blue); font-size:0.92rem;">
                 $${(item.pricePerSqFt * item.quantity).toFixed(2)}
               </span>
             </div>
@@ -387,7 +409,7 @@ function submitQuoteTrayRequest() {
   const name = document.getElementById('drawerCustName')?.value || 'Valued Customer';
   const email = document.getElementById('drawerCustEmail')?.value || 'customer@example.com';
   
-  showToast(`🚀 Official Quote Submitted for ${name}! Our team sent a breakdown to ${email}.`);
+  showToast(`🚀 Official Quote Request Submitted for ${name}! Details sent to ${email}.`);
   cartItems = [];
   updateCartUI();
   toggleDrawer();
@@ -412,14 +434,14 @@ function openProductModal(productId) {
       <div class="modal-price">$${product.pricePerSqFt.toFixed(2)} <small>${product.unitLabel || '/ sq. ft.'}</small></div>
       <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px;">${product.description}</p>
       
-      <h4 style="color: var(--dark-blue); font-size: 0.95rem; margin-bottom: 8px;">Product Specifications Sheet</h4>
+      <h4 style="color: var(--navy-dark); font-size: 0.95rem; margin-bottom: 8px;">Technical Specification Sheet</h4>
       <table class="specs-table">
-        <tr><td>Brand / Origin:</td><td>${product.origin}</td></tr>
+        <tr><td>Origin / Brand:</td><td>${product.origin}</td></tr>
         <tr><td>Finish / Form:</td><td>${product.finish}</td></tr>
         <tr><td>Container / Spec:</td><td>${product.thickness}</td></tr>
-        <tr><td>Packaging Formats:</td><td>${product.sizes}</td></tr>
-        <tr><td>Water & Chemical Resistance:</td><td>${product.waterAbsorption}</td></tr>
-        <tr><td>Recommended Use:</td><td>${product.recommendedUse}</td></tr>
+        <tr><td>Available Formats:</td><td>${product.sizes}</td></tr>
+        <tr><td>Water / Mildew Resistance:</td><td>${product.waterAbsorption}</td></tr>
+        <tr><td>Recommended Usage:</td><td>${product.recommendedUse}</td></tr>
       </table>
 
       <div style="display: flex; gap: 12px; margin-top: 24px;">

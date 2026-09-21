@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VerveStone & DAP Systems | Natural Stone, Marble & DAP Sealants</title>
-  <meta name="description" content="Direct factory supplier of Italian marble, travertine pavers, porcelain slabs, and professional DAP adhesives and waterproof sealants.">
+  <title>VerveStone & DAP Professional Surfaces | Natural Stone & DAP Sealants</title>
+  <meta name="description" content="Direct factory supplier of Italian marble, travertine pavers, porcelain slabs, and professional DAP adhesives and waterproof sealants. Inspired by Bema Stone.">
   
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Top Announcement Bar - Deep Blue -->
+  <!-- Top Announcement Bar - Deep Navy -->
   <div class="top-bar">
     <div class="top-bar-left">
       <span>📞 +1 (800) 555-STONE (7866)</span>
@@ -34,7 +34,7 @@
       <ul class="nav-links">
         <li><a href="#hero" class="active">Home</a></li>
         <li><a href="#categories">Categories</a></li>
-        <li><a href="#catalog">Stone & DAP Catalog</a></li>
+        <li><a href="#catalog">Catalog</a></li>
         <li><a href="#quote-section">Request Quote</a></li>
       </ul>
 
@@ -61,12 +61,12 @@
       <div class="hero-tag">✨ Quarry Direct Natural Stone & DAP Products</div>
       <h1 class="hero-title">Architectural Natural Stone & <span>DAP Professional Sealants</span></h1>
       <p class="hero-subtitle">
-        Premium Calacatta Marble, Turkish Travertine Pavers, Porcelain Slabs, along with official DAP ALEX PLUS, DYNAFLEX 230, and Heavy Duty Stone Adhesives.
+        Premium Calacatta Gold Marble, Turkish Travertine Pavers, Porcelain Slabs, alongside official DAP ALEX PLUS, DYNAFLEX 230, and Heavy Duty Construction Adhesives.
       </p>
 
       <div class="hero-cta">
         <a href="#catalog" class="btn-primary">Browse Stone & DAP Catalog →</a>
-        <button class="btn-outline" onclick="toggleDrawer()">🛒 View Quote Tray</button>
+        <button class="btn-outline" onclick="toggleDrawer()">🛒 View Bema Quote Tray</button>
       </div>
 
       <div class="hero-stats">
@@ -76,7 +76,7 @@
         </div>
         <div class="stat-item">
           <h3>DAP®</h3>
-          <p>Official Sealant Products</p>
+          <p>Official Sealants & Caulks</p>
         </div>
         <div class="stat-item">
           <h3>100%</h3>
@@ -227,6 +227,17 @@
     </div>
   </section>
 
+  <!-- STICKY BOTTOM BEMA QUOTE BAR -->
+  <div class="bema-bottom-bar" id="bemaBottomBar">
+    <div class="bema-bottom-info">
+      <h4>🛒 Bema Stone Quote Tray</h4>
+      <p>Est. Total: <strong id="bottomTotal" style="color:var(--sky-light); font-size:1rem; margin-left:6px;">$0.00</strong></p>
+    </div>
+    <button class="btn-primary" onclick="toggleDrawer()">
+      Review Quote Tray (<span id="bottomCartBadge">0</span>) →
+    </button>
+  </div>
+
   <!-- BEMA STONE STYLE CART & QUOTE TRAY DRAWER -->
   <div class="drawer-overlay" id="drawerOverlay" onclick="toggleDrawer()"></div>
   <div class="drawer" id="sampleDrawer">
@@ -241,15 +252,15 @@
     <div class="drawer-footer">
       <div class="summary-row">
         <span>Subtotal:</span>
-        <strong id="cartSubtotal" style="color:var(--dark-blue);">$0.00</strong>
+        <strong id="cartSubtotal" style="color:var(--navy-dark);">$0.00</strong>
       </div>
       <div class="summary-row">
         <span>Est. Freight & Tax (5%):</span>
-        <span style="color:var(--text-dim);">Calculated on Submit</span>
+        <span style="color:var(--text-muted);">Calculated on Submit</span>
       </div>
       <div class="summary-row total">
         <span>Estimated Total:</span>
-        <strong id="cartEstTotal" style="color:var(--primary-blue);">$0.00</strong>
+        <strong id="cartEstTotal" style="color:var(--bema-blue);">$0.00</strong>
       </div>
 
       <div style="margin-top: 16px; display:flex; flex-direction:column; gap:10px;">
