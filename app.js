@@ -1,5 +1,5 @@
 /* ==========================================================================
-   VerveStone & DAP Professional Surfaces - Logic & Bema Stone Quote Tray
+   Asma Stone LLC & DAP Professional Surfaces - Logic & Quote Tray
    ========================================================================== */
 
 const PRODUCTS = [
@@ -14,7 +14,7 @@ const PRODUCTS = [
     unitLabel: '/ sq. ft.',
     rating: 4.9,
     image: 'images/marble_calacatta.jpg',
-    badge: 'BEMA SELECT',
+    badge: 'ASMA SELECT',
     origin: 'Carrara, Italy',
     sizes: '24"x24", 12"x24", Slabs',
     waterAbsorption: '0.12%',
@@ -234,7 +234,7 @@ function renderCatalog() {
     <div class="product-card" data-id="${product.id}">
       <div class="product-thumb">
         <img src="${product.image}" alt="${product.title}" loading="lazy">
-        <span class="product-tag ${product.isDap ? 'dap-tag' : ''}">${product.badge || 'BEMA SELECT'}</span>
+        <span class="product-tag ${product.isDap ? 'dap-tag' : ''}">${product.badge || 'ASMA SELECT'}</span>
         <div class="product-quick-view">
           <button onclick="openProductModal('${product.id}')">🔍 Quick View & Technical Specs</button>
         </div>
@@ -302,13 +302,13 @@ function setupEventListeners() {
   if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      showToast('✨ Thank you! Your Bema Stone project quote request has been submitted. Our team will contact you within 2 hours.');
+      showToast('✨ Thank you! Your Asma Stone LLC project quote request has been submitted. Our team will contact you within 2 hours.');
       quoteForm.reset();
     });
   }
 }
 
-// BEMA STONE STYLE CART & QUOTE TRAY LOGIC
+// ASMA STONE STYLE CART & QUOTE TRAY LOGIC
 function addToQuoteCart(productId) {
   const product = PRODUCTS.find(p => p.id === productId);
   if (!product) return;
@@ -324,7 +324,7 @@ function addToQuoteCart(productId) {
   }
   updateCartUI();
   toggleDrawer(true);
-  showToast(`🛒 Added "${product.title}" to Bema Stone Quote Tray!`);
+  showToast(`🛒 Added "${product.title}" to Asma Stone LLC Quote Tray!`);
 }
 
 function updateCartQuantity(productId, delta) {
@@ -361,7 +361,7 @@ function updateCartUI() {
       drawerItems.innerHTML = `
         <div style="text-align: center; padding: 50px 10px; color: var(--text-dim);">
           <svg width="50" height="50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 12px; color: var(--bema-blue);"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-          <h4 style="color: var(--navy-dark);">Your Bema Stone Quote Tray is Empty</h4>
+          <h4 style="color: var(--navy-dark);">Your Asma Stone LLC Quote Tray is Empty</h4>
           <p style="font-size: 0.85rem; margin-top: 6px;">Add natural stone tiles or DAP caulks/adhesives to request a direct factory quote.</p>
         </div>
       `;
@@ -407,7 +407,7 @@ function submitQuoteTrayRequest() {
     return;
   }
   const name = document.getElementById('drawerCustName')?.value || 'Valued Customer';
-  const email = document.getElementById('drawerCustEmail')?.value || 'customer@example.com';
+  const email = document.getElementById('drawerCustEmail')?.value || 'asmabatoolllc@gmail.com';
   
   showToast(`🚀 Official Quote Request Submitted for ${name}! Details sent to ${email}.`);
   cartItems = [];
@@ -446,7 +446,7 @@ function openProductModal(productId) {
 
       <div style="display: flex; gap: 12px; margin-top: 24px;">
         <button class="btn-primary" style="flex: 1;" onclick="addToQuoteCart('${product.id}'); closeModal();">
-          🛒 Add to Bema Stone Quote Tray
+          🛒 Add to Asma Stone LLC Quote Tray
         </button>
       </div>
     </div>
