@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerveStone Surfaces | Direct Quarried Natural Stone, Travertine & Marble</title>
+  <meta name="description" content="Premier exporter and manufacturer of natural stone tiles, travertine pavers, Italian marble slabs, porcelain, and luxury mosaics for high-end architecture.">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span>📞 +1 (800) 555-STONE (7866)</span>
+      <span>✉️ export@vervestone.com</span>
+      <span>🌐 Direct Factory & Quarry Imports</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="badge-gold">⚡ Express Sample Courier Worldwide</span>
+      <span>Currency: <strong>USD ($)</strong></span>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon">V</div>
+        <div class="brand-name">VERVE<span>STONE</span></div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#catalog">Collection</a></li>
+        <li><a href="#visualizer">Visualizer</a></li>
+        <li><a href="#quote-section">Request Quote</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="searchInput" placeholder="Search Calacatta, Silver...">
+        </div>
+
+        <button class="cart-btn" onclick="toggleDrawer()">
+          📦 Sample Box
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+
+        <button class="btn-primary" onclick="scrollToQuote()">Get Quote</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-tag">✨ Quarry Direct • Architectural Grade</div>
+      <h1 class="hero-title">Elevate Spaces with <span>Natural Stone & Marble</span></h1>
+      <p class="hero-subtitle">
+        Curated selection of Italian Calacatta Marble, Turkish Travertine Pavers, French Pattern Tiles, and Waterjet Mosaics for luxury residential and commercial developments.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#catalog" class="btn-primary">Explore Stone Collection →</a>
+        <button class="btn-outline" onclick="toggleDrawer()">📦 Order Sample Kit</button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <h3>450+</h3>
+          <p>Natural Stone Varieties</p>
+        </div>
+        <div class="stat-item">
+          <h3>28+</h3>
+          <p>Export Countries</p>
+        </div>
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Factory Quality Guarantee</p>
+        </div>
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Project Concierge Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Grid Section -->
+  <section class="section" id="categories">
+    <div class="section-header">
+      <div class="section-subtitle">Architectural Materials</div>
+      <h2 class="section-title">Explore Stone Categories</h2>
+      <p class="section-desc">From rustic outdoor patio travertine pavers to polished indoor Italian marble slabs.</p>
+    </div>
+
+    <div class="categories-grid">
+      <div class="category-card" onclick="setCategoryFilter('marble')">
+        <img src="images/marble_calacatta.jpg" alt="Marble Slabs">
+        <div class="category-overlay">
+          <h3>Italian Marble</h3>
+          <p>Calacatta, Carrara & Nero Marquina</p>
+        </div>
+      </div>
+
+      <div class="category-card" onclick="setCategoryFilter('travertine')">
+        <img src="images/travertine_silver.jpg" alt="Travertine Tiles">
+        <div class="category-overlay">
+          <h3>Natural Travertine</h3>
+          <p>Silver, Ivory & Walnut French Pattern</p>
+        </div>
+      </div>
+
+      <div class="category-card" onclick="setCategoryFilter('porcelain')">
+        <img src="images/porcelain_statuario.jpg" alt="Porcelain Slabs">
+        <div class="category-overlay">
+          <h3>Luxury Porcelain</h3>
+          <p>Large Format Low-Maintenance Slabs</p>
+        </div>
+      </div>
+
+      <div class="category-card" onclick="setCategoryFilter('mosaics')">
+        <img src="images/mosaic_herringbone.jpg" alt="Mosaics">
+        <div class="category-overlay">
+          <h3>Waterjet Mosaics</h3>
+          <p>Herringbone, Geometric & Brass Inlay</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section -->
+  <section class="section" id="catalog">
+    <div class="section-header">
+      <div class="section-subtitle">Featured Inventory</div>
+      <h2 class="section-title">Real-Time Stone Product Catalog</h2>
+      <p class="section-desc" id="catalogCount">Loading live products...</p>
+    </div>
+
+    <!-- Filter & Toolbar -->
+    <div class="catalog-toolbar">
+      <div class="filter-pills">
+        <button class="filter-pill active" data-category="all">All Surfaces</button>
+        <button class="filter-pill" data-category="marble">Marble</button>
+        <button class="filter-pill" data-category="travertine">Travertine</button>
+        <button class="filter-pill" data-category="porcelain">Porcelain</button>
+        <button class="filter-pill" data-category="mosaics">Mosaics</button>
+      </div>
+
+      <div class="filter-controls">
+        <select id="finishFilter" class="select-custom">
+          <option value="all">All Finishes</option>
+          <option value="honed">Honed</option>
+          <option value="polished">Polished</option>
+          <option value="brushed">Brushed</option>
+          <option value="matte">Matte</option>
+        </select>
+
+        <select id="sortFilter" class="select-custom">
+          <option value="popular">Sort by: Most Popular</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating">Highest Rated</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid Container -->
+    <div class="product-grid" id="productGrid">
+      <!-- Dynamic products rendered via app.js -->
+    </div>
+
+    <!-- Easy Code Customization Guide for User -->
+    <div class="customization-banner">
+      <div class="banner-text">
+        <h4>⚡ How to Add More Products to this Website?</h4>
+        <p>You can easily add or change any product by opening the file <code style="color: var(--accent-gold-light);">app.js</code> and adding a new product object inside the <code style="color: var(--accent-gold-light);">PRODUCTS</code> array!</p>
+      </div>
+      <div class="banner-code-tag">
+        open app.js → add item to PRODUCTS []
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Surface Visualizer -->
+  <section class="section" id="visualizer">
+    <div class="visualizer-section">
+      <div class="visualizer-container">
+        <div class="visualizer-preview">
+          <div class="visualizer-badge">Live Texture Preview</div>
+          <img id="visualizerImg" src="images/marble_calacatta.jpg" alt="Surface Preview">
+        </div>
+
+        <div class="visualizer-controls">
+          <div class="section-subtitle">Interactive Design Tool</div>
+          <h3>Real-Time Stone Texture Inspector</h3>
+          <p style="color: var(--text-dim); margin-bottom: 20px;">
+            Click on any surface texture swatch below to preview high-resolution detail, grain, veining, and finish reflectance in real-time.
+          </p>
+
+          <div class="swatch-group">
+            <div class="swatch-item active" data-img="images/marble_calacatta.jpg" data-name="Calacatta Gold Marble">
+              <img src="images/marble_calacatta.jpg" alt="Calacatta">
+            </div>
+            <div class="swatch-item" data-img="images/travertine_silver.jpg" data-name="Silver Travertine">
+              <img src="images/travertine_silver.jpg" alt="Silver Travertine">
+            </div>
+            <div class="swatch-item" data-img="images/nero_marquina.jpg" data-name="Nero Marquina Black Marble">
+              <img src="images/nero_marquina.jpg" alt="Nero Marquina">
+            </div>
+            <div class="swatch-item" data-img="images/porcelain_statuario.jpg" data-name="Statuario Porcelain Slab">
+              <img src="images/porcelain_statuario.jpg" alt="Statuario Porcelain">
+            </div>
+            <div class="swatch-item" data-img="images/mosaic_herringbone.jpg" data-name="Carrara Herringbone Mosaic">
+              <img src="images/mosaic_herringbone.jpg" alt="Herringbone Mosaic">
+            </div>
+            <div class="swatch-item" data-img="images/french_pattern_paver.jpg" data-name="Walnut Travertine Paver">
+              <img src="images/french_pattern_paver.jpg" alt="French Pattern Paver">
+            </div>
+          </div>
+
+          <h4 id="visualizerTitle" style="color: var(--accent-gold-light); font-size: 1.1rem; margin-top: 10px;">
+            Calacatta Gold Marble
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote & Project Inquiry Section -->
+  <section class="section" id="quote-section">
+    <div class="quote-section">
+      <div class="quote-info">
+        <div class="section-subtitle">Direct Factory Pricing</div>
+        <h2>Request a Custom Project Quote</h2>
+        <p>
+          Whether you are an architect, contractor, designer, or homeowner, submit your project details and material estimates for direct quarry pricing and freight quote.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <div class="contact-icon">📍</div>
+            <div><strong>Headquarters:</strong> 100 Natural Stone Way, Design District, FL 33137</div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-icon">📞</div>
+            <div><strong>Phone Support:</strong> +1 (800) 555-7866 / +1 (305) 555-0199</div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-icon">✉️</div>
+            <div><strong>Inquiry Email:</strong> quotes@vervestone.com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-form-card">
+        <form id="quoteForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="e.g. John Architect" required>
+            </div>
+            <div class="form-group">
+              <label for="emailAddr">Email Address</label>
+              <input type="email" id="emailAddr" placeholder="john@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phoneNum">Phone Number</label>
+              <input type="tel" id="phoneNum" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label for="stoneSelect">Target Material</label>
+              <select id="stoneSelect">
+                <option value="Calacatta Gold Marble">Calacatta Gold Marble</option>
+                <option value="Silver Vein-Cut Travertine">Silver Vein-Cut Travertine</option>
+                <option value="Nero Marquina Black Marble">Nero Marquina Black Marble</option>
+                <option value="Statuario Imperial Porcelain">Statuario Imperial Porcelain</option>
+                <option value="French Pattern Pavers">French Pattern Travertine Pavers</option>
+                <option value="Other / Custom Stone Order">Other / Custom Order</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sqftInput">Estimated Area (Sq. Ft.)</label>
+              <input type="number" id="sqftInput" placeholder="e.g. 1500" required>
+            </div>
+            <div class="form-group">
+              <label for="projectType">Project Type</label>
+              <select id="projectType">
+                <option value="Residential">Residential Luxury Home</option>
+                <option value="Commercial">Commercial Hotel / Office</option>
+                <option value="Outdoor Pool">Outdoor Pool & Patio</option>
+                <option value="Wholesale">Wholesale / Distributor Order</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="messageText">Project Details & Delivery Zip Code</label>
+              <textarea id="messageText" rows="3" placeholder="Specify thickness requirements, edge finishes, delivery target date..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%;">
+            ✉️ Submit Project Quote Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide-out Sample Box Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay" onclick="toggleDrawer()"></div>
+  <div class="drawer" id="sampleDrawer">
+    <div class="drawer-header">
+      <h3>📦 Your Sample Box</h3>
+      <button style="background:none; border:none; color:#fff; font-size:1.4rem; cursor:pointer;" onclick="toggleDrawer()">✕</button>
+    </div>
+    <div class="drawer-items" id="drawerItems">
+      <!-- Items dynamically injected -->
+    </div>
+    <div class="drawer-footer">
+      <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-size:0.9rem;">
+        <span>Sample Fee:</span>
+        <strong style="color:var(--accent-gold-light);">COMPLIMENTARY ($0)</strong>
+      </div>
+      <div style="display:flex; justify-content:space-between; margin-bottom:18px; font-size:0.9rem;">
+        <span>Express Shipping:</span>
+        <strong>Free Priority Courier</strong>
+      </div>
+      <button class="btn-primary" style="width:100%;" onclick="submitSampleRequest()">
+        Submit Free Sample Request
+      </button>
+    </div>
+  </div>
+
+  <!-- Product Spec Detail Modal -->
+  <div class="modal-overlay" id="productModal" onclick="if(event.target === this) closeModal()">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-body" id="modalDetails">
+        <!-- Content filled dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <div class="logo-icon">V</div>
+          <div class="brand-name">VERVE<span>STONE</span></div>
+        </div>
+        <p>Premier quarry direct manufacturer and exporter of luxury natural stone, Italian marble, Turkish travertine pavers, and porcelain slabs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#catalog">Italian Marble Slabs</a></li>
+          <li><a href="#catalog">Silver Travertine Pavers</a></li>
+          <li><a href="#catalog">French Pattern Travertine</a></li>
+          <li><a href="#catalog">Waterjet Mosaics</a></li>
+          <li><a href="#catalog">Pool Coping & Trim</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#hero">About VerveStone</a></li>
+          <li><a href="#hero">Direct Quarry Operations</a></li>
+          <li><a href="#quote-section">Trade & Architect Program</a></li>
+          <li><a href="#quote-section">Global Logistics & Freight</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact & Trade</h4>
+        <ul>
+          <li>📞 Toll Free: +1 (800) 555-7866</li>
+          <li>✉️ info@vervestone.com</li>
+          <li>📍 USA Showroom & Distribution</li>
+          <li>📄 Download 2026 Catalog (PDF)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 VerveStone Surfaces Co. All rights reserved.</p>
+      <p>Designed for Luxury Architectural Projects</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    function setCategoryFilter(category) {
+      currentCategory = category;
+      const pills = document.querySelectorAll('.filter-pill');
+      pills.forEach(p => {
+        if (p.getAttribute('data-category') === category) {
+          p.classList.add('active');
+        } else {
+          p.classList.remove('active');
+        }
+      });
+      const catalogEl = document.getElementById('catalog');
+      if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
+      renderCatalog();
+    }
+  </script>
+</body>
+</html>
