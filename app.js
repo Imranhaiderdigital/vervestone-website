@@ -1,11 +1,9 @@
 /* ==========================================================================
-   VerveStone Surfaces - Application Logic & Product Catalog Data
-   ==========================================================================
-   HOW TO ADD OR MODIFY PRODUCTS:
-   Simply add a new object to the `PRODUCTS` array below!
+   VerveStone Surfaces & DAP Products - Application Logic & Quote Cart
    ========================================================================== */
 
 const PRODUCTS = [
+  // Natural Stone & Marble Products
   {
     id: 'prod-1',
     title: 'Calacatta Gold Sovereign Marble',
@@ -13,6 +11,7 @@ const PRODUCTS = [
     finish: 'Honed',
     thickness: '3/4" (20mm)',
     pricePerSqFt: 24.50,
+    unitLabel: '/ sq. ft.',
     rating: 4.9,
     image: 'images/marble_calacatta.jpg',
     badge: 'Best Seller',
@@ -24,11 +23,12 @@ const PRODUCTS = [
   },
   {
     id: 'prod-2',
-    title: 'Silver Vein-Cut Travertine',
+    title: 'Silver Vein-Cut Travertine Pavers',
     category: 'travertine',
     finish: 'Brushed & Filled',
     thickness: '1/2" (12mm)',
     pricePerSqFt: 14.80,
+    unitLabel: '/ sq. ft.',
     rating: 4.8,
     image: 'images/travertine_silver.jpg',
     badge: 'Popular',
@@ -45,6 +45,7 @@ const PRODUCTS = [
     finish: 'Polished High Gloss',
     thickness: '3/4" (20mm)',
     pricePerSqFt: 22.00,
+    unitLabel: '/ sq. ft.',
     rating: 5.0,
     image: 'images/nero_marquina.jpg',
     badge: 'Luxury Select',
@@ -52,7 +53,7 @@ const PRODUCTS = [
     sizes: '24"x24", 18"x18", Slabs',
     waterAbsorption: '0.18%',
     recommendedUse: 'Fireplace Surround, Foyer Flooring, Kitchen Countertops',
-    description: 'Dramatic velvet black Spanish marble punctuated with stark, electrifying white calcite veins.'
+    description: 'Dramatic velvet black Spanish marble punctuated with stark white calcite veins.'
   },
   {
     id: 'prod-4',
@@ -61,6 +62,7 @@ const PRODUCTS = [
     finish: 'Matte Soft Velvet',
     thickness: '1/4" (6mm)',
     pricePerSqFt: 11.90,
+    unitLabel: '/ sq. ft.',
     rating: 4.7,
     image: 'images/porcelain_statuario.jpg',
     badge: 'Low Maintenance',
@@ -77,6 +79,7 @@ const PRODUCTS = [
     finish: 'Polished',
     thickness: '3/8" (10mm)',
     pricePerSqFt: 18.50,
+    unitLabel: '/ sq. ft.',
     rating: 4.9,
     image: 'images/mosaic_herringbone.jpg',
     badge: 'Artisan Tile',
@@ -86,37 +89,79 @@ const PRODUCTS = [
     recommendedUse: 'Kitchen Backsplash, Shower Niche, Accent Border',
     description: 'Precision waterjet herringbone mosaic featuring white Carrara marble intertwined with brushed brass inlay.'
   },
+
+  // NEW DAP PRODUCTS (Adhesives, Caulks & Sealants)
   {
-    id: 'prod-6',
-    title: 'Walnut Antique French Pattern Pavers',
-    category: 'travertine',
-    finish: 'Chiseled Edge Tumbled',
-    thickness: '1-1/4" (30mm)',
-    pricePerSqFt: 9.75,
-    rating: 4.8,
-    image: 'images/french_pattern_paver.jpg',
-    badge: 'Outdoor Deck',
-    origin: 'Denizli, Turkey',
-    sizes: 'French Pattern (8"x8", 8"x16", 16"x16", 16"x24")',
-    waterAbsorption: '0.50%',
-    recommendedUse: 'Patio, Pool Deck, Courtyard Pavers',
-    description: 'Timeless Mediterranean outdoor travertine pavers with rich honey, chestnut, and walnut tones.'
+    id: 'dap-1',
+    title: 'DAP ALEX PLUS Acrylic Latex Caulk w/ Silicone',
+    category: 'dap-sealants',
+    finish: 'Waterproof Seal',
+    thickness: '10.1 oz Cartridge',
+    pricePerSqFt: 6.99,
+    unitLabel: '/ tube',
+    rating: 4.9,
+    image: 'images/dap_alex_plus.jpg',
+    badge: 'DAP Original',
+    isDap: true,
+    origin: 'DAP Products Inc, USA',
+    sizes: '10.1 fl oz Tube',
+    waterAbsorption: '100% Waterproof',
+    recommendedUse: 'Window & Door Frames, Crown Molding, Baseboards, Tile Gaps',
+    description: 'America’s #1 selling caulk. Superior flexibility, paintable in 30 minutes, mildew resistant sealant for stone & tile installations.'
   },
   {
-    id: 'prod-7',
-    title: 'Ivory Smooth Bullnose Pool Coping',
-    category: 'travertine',
-    finish: 'Honed Smooth Rim',
-    thickness: '2" (50mm)',
-    pricePerSqFt: 16.50,
+    id: 'dap-2',
+    title: 'DAP DYNAFLEX 230 Premium Waterproof Sealant',
+    category: 'dap-sealants',
+    finish: 'Elastomeric Flex',
+    thickness: '10.8 oz Tube',
+    pricePerSqFt: 9.49,
+    unitLabel: '/ tube',
+    rating: 4.8,
+    image: 'images/dap_sealant.jpg',
+    badge: 'DAP Heavy Duty',
+    isDap: true,
+    origin: 'DAP Products Inc, USA',
+    sizes: '10.8 fl oz Tube',
+    waterAbsorption: 'Submersible Waterproof',
+    recommendedUse: 'Exterior Travertine Joints, Pool Coping Grout, Masonry',
+    description: 'Delivers silicone performance with latex ease of use. Outstanding flexibility and adhesion to natural stone, marble, and concrete.'
+  },
+  {
+    id: 'dap-3',
+    title: 'DAP KWIK SEAL Kitchen & Bath Adhesive Caulk',
+    category: 'dap-sealants',
+    finish: 'Gloss White / Clear',
+    thickness: '5.5 oz Squeeze Tube',
+    pricePerSqFt: 5.79,
+    unitLabel: '/ tube',
     rating: 4.9,
-    image: 'images/pool_coping_bullnose.jpg',
-    badge: 'Pool Essential',
-    origin: 'Denizli, Turkey',
-    sizes: '12"x24" Bullnose Coping',
-    waterAbsorption: '0.40%',
-    recommendedUse: 'Swimming Pool Edge, Step Treads, Retaining Wall Cap',
-    description: 'Silky smooth non-slip temperature-resistant natural travertine coping with elegant safety bullnose edge.'
+    image: 'images/dap_alex_plus.jpg',
+    badge: 'Bath & Tile',
+    isDap: true,
+    origin: 'DAP Products Inc, USA',
+    sizes: '5.5 fl oz Tube',
+    waterAbsorption: '100% Mold & Mildew Proof',
+    recommendedUse: 'Marble Tub Surrounds, Granite Vanities, Tile Backsplashes',
+    description: 'Specially formulated for kitchen and bath applications. Cures to a durable watertight seal that prevents mold & bacterial growth.'
+  },
+  {
+    id: 'dap-4',
+    title: 'DAP Beats The Nails Heavy Duty Construction Adhesive',
+    category: 'dap-sealants',
+    finish: 'High Tack Bond',
+    thickness: '10.3 oz Cartridge',
+    pricePerSqFt: 8.29,
+    unitLabel: '/ tube',
+    rating: 5.0,
+    image: 'images/dap_sealant.jpg',
+    badge: 'Stone Bond',
+    isDap: true,
+    origin: 'DAP Products Inc, USA',
+    sizes: '10.3 fl oz Cartridge',
+    waterAbsorption: 'Weatherproof Instant Grab',
+    recommendedUse: 'Heavy Marble Wall Cladding, Travertine Paver Bonding',
+    description: 'Professional grade high-strength construction adhesive specifically formulated to bond heavy natural stone slabs and tiles without sagging.'
   }
 ];
 
@@ -125,13 +170,11 @@ let currentCategory = 'all';
 let currentFinish = 'all';
 let searchQuery = '';
 let sortBy = 'popular';
-let sampleCart = [];
+let cartItems = []; // Bema Stone style Cart / Quote Tray state
 
-// DOM Elements
 document.addEventListener('DOMContentLoaded', () => {
   renderCatalog();
   setupEventListeners();
-  setupVisualizer();
 });
 
 // Render Catalog Grid
@@ -148,7 +191,6 @@ function renderCatalog() {
     return matchesCategory && matchesFinish && matchesSearch;
   });
 
-  // Sorting
   if (sortBy === 'price-low') {
     filtered.sort((a, b) => a.pricePerSqFt - b.pricePerSqFt);
   } else if (sortBy === 'price-high') {
@@ -157,14 +199,14 @@ function renderCatalog() {
     filtered.sort((a, b) => b.rating - a.rating);
   }
 
-  if (countEl) countEl.innerText = `${filtered.length} Surfaces Available`;
+  if (countEl) countEl.innerText = `${filtered.length} Products & Sealants Available`;
 
   if (filtered.length === 0) {
     grid.innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-dim);">
-        <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 16px; color: var(--accent-gold);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <h3>No matching natural stone surfaces found</h3>
-        <p style="margin-top: 8px;">Try clearing filters or searching for another material like "Marble" or "Travertine".</p>
+        <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 16px; color: var(--primary-blue);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <h3>No matching products found</h3>
+        <p style="margin-top: 8px;">Try clearing filters or searching for "DAP", "Marble" or "Travertine".</p>
       </div>
     `;
     return;
@@ -174,14 +216,14 @@ function renderCatalog() {
     <div class="product-card" data-id="${product.id}">
       <div class="product-thumb">
         <img src="${product.image}" alt="${product.title}" loading="lazy">
-        <span class="product-tag">${product.badge || 'Premium'}</span>
+        <span class="product-tag ${product.isDap ? 'dap-tag' : ''}">${product.badge || 'Premium'}</span>
         <div class="product-quick-view">
-          <button onclick="openProductModal('${product.id}')">🔍 Quick View & Full Specs</button>
+          <button onclick="openProductModal('${product.id}')">🔍 Quick View & Technical Specs</button>
         </div>
       </div>
       <div class="product-info">
         <div class="product-meta">
-          <span>${product.category.toUpperCase()}</span>
+          <span>${product.category.toUpperCase().replace('-', ' ')}</span>
           <span>★ ${product.rating}</span>
         </div>
         <h3 class="product-title">${product.title}</h3>
@@ -191,10 +233,10 @@ function renderCatalog() {
         </div>
         <div class="product-footer">
           <div class="product-price">
-            $${product.pricePerSqFt.toFixed(2)} <small>/ sq ft</small>
+            $${product.pricePerSqFt.toFixed(2)} <small>${product.unitLabel || '/ sq ft'}</small>
           </div>
-          <button class="btn-sample" onclick="addToSampleCart('${product.id}')">
-            + Sample Kit
+          <button class="btn-add-quote" onclick="addToQuoteCart('${product.id}')">
+            🛒 + Add to Quote Tray
           </button>
         </div>
       </div>
@@ -204,7 +246,6 @@ function renderCatalog() {
 
 // Event Listeners setup
 function setupEventListeners() {
-  // Category Pill Filters
   const pills = document.querySelectorAll('.filter-pill');
   pills.forEach(pill => {
     pill.addEventListener('click', (e) => {
@@ -215,7 +256,6 @@ function setupEventListeners() {
     });
   });
 
-  // Finish Selector
   const finishSelect = document.getElementById('finishFilter');
   if (finishSelect) {
     finishSelect.addEventListener('change', (e) => {
@@ -224,7 +264,6 @@ function setupEventListeners() {
     });
   }
 
-  // Sort Selector
   const sortSelect = document.getElementById('sortFilter');
   if (sortSelect) {
     sortSelect.addEventListener('change', (e) => {
@@ -233,7 +272,6 @@ function setupEventListeners() {
     });
   }
 
-  // Search Input
   const searchInput = document.getElementById('searchInput');
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
@@ -242,18 +280,120 @@ function setupEventListeners() {
     });
   }
 
-  // Quote Form Submission
   const quoteForm = document.getElementById('quoteForm');
   if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      showToast('✨ Thank you! Your custom project quote request has been submitted. Our stone specialist will reach out shortly.');
+      showToast('✨ Thank you! Your custom project quote request has been submitted. Our team will contact you within 2 hours.');
       quoteForm.reset();
     });
   }
 }
 
-// Product Modal Specs Popup
+// BEMA STONE STYLE CART & QUOTE TRAY LOGIC
+function addToQuoteCart(productId) {
+  const product = PRODUCTS.find(p => p.id === productId);
+  if (!product) return;
+
+  const existing = cartItems.find(item => item.id === productId);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cartItems.push({
+      ...product,
+      quantity: 1
+    });
+  }
+  updateCartUI();
+  toggleDrawer(true);
+  showToast(`🛒 Added "${product.title}" to your Bema Stone Quote Tray!`);
+}
+
+function updateCartQuantity(productId, delta) {
+  const item = cartItems.find(i => i.id === productId);
+  if (!item) return;
+
+  item.quantity += delta;
+  if (item.quantity <= 0) {
+    cartItems = cartItems.filter(i => i.id !== productId);
+  }
+  updateCartUI();
+}
+
+function updateCartUI() {
+  const badge = document.getElementById('cartBadge');
+  const drawerItems = document.getElementById('drawerItems');
+  const cartSubtotalEl = document.getElementById('cartSubtotal');
+  const cartEstTotalEl = document.getElementById('cartEstTotal');
+
+  const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  if (badge) badge.innerText = totalCount;
+
+  const subtotal = cartItems.reduce((sum, item) => sum + (item.pricePerSqFt * item.quantity), 0);
+
+  if (cartSubtotalEl) cartSubtotalEl.innerText = `$${subtotal.toFixed(2)}`;
+  if (cartEstTotalEl) cartEstTotalEl.innerText = `$${(subtotal * 1.05).toFixed(2)}`;
+
+  if (drawerItems) {
+    if (cartItems.length === 0) {
+      drawerItems.innerHTML = `
+        <div style="text-align: center; padding: 50px 10px; color: var(--text-dim);">
+          <svg width="50" height="50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 12px; color: var(--primary-blue);"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <h4 style="color: var(--dark-blue);">Your Quote Tray is Empty</h4>
+          <p style="font-size: 0.85rem; margin-top: 6px;">Browse natural stone or DAP products and click "+ Add to Quote Tray" to build your custom order.</p>
+        </div>
+      `;
+    } else {
+      drawerItems.innerHTML = cartItems.map(item => `
+        <div class="drawer-cart-item">
+          <img src="${item.image}" alt="${item.title}">
+          <div class="drawer-cart-info">
+            <h4>${item.title}</h4>
+            <p>${item.finish} • $${item.pricePerSqFt.toFixed(2)} ${item.unitLabel || '/ sq. ft.'}</p>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="updateCartQuantity('${item.id}', -1)">-</button>
+              <span class="qty-val">${item.quantity}</span>
+              <button class="qty-btn" onclick="updateCartQuantity('${item.id}', 1)">+</button>
+              <span style="margin-left: auto; font-weight:700; color:var(--primary-blue); font-size:0.9rem;">
+                $${(item.pricePerSqFt * item.quantity).toFixed(2)}
+              </span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+  }
+}
+
+function toggleDrawer(forceOpen = false) {
+  const drawer = document.getElementById('sampleDrawer');
+  const overlay = document.getElementById('drawerOverlay');
+  if (drawer && overlay) {
+    if (forceOpen) {
+      drawer.classList.add('active');
+      overlay.classList.add('active');
+    } else {
+      drawer.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+  }
+}
+
+function submitQuoteTrayRequest() {
+  if (cartItems.length === 0) {
+    showToast('⚠️ Please add at least 1 product to your quote tray.');
+    return;
+  }
+  const name = document.getElementById('drawerCustName')?.value || 'Valued Customer';
+  const email = document.getElementById('drawerCustEmail')?.value || 'customer@example.com';
+  
+  showToast(`🚀 Official Quote Submitted for ${name}! Our team sent a breakdown to ${email}.`);
+  cartItems = [];
+  updateCartUI();
+  toggleDrawer();
+}
+
+// Product Spec Modal Popup
 function openProductModal(productId) {
   const product = PRODUCTS.find(p => p.id === productId);
   if (!product) return;
@@ -267,27 +407,24 @@ function openProductModal(productId) {
       <img src="${product.image}" alt="${product.title}">
     </div>
     <div class="modal-info">
-      <span class="badge-gold">${product.category.toUpperCase()} • ${product.origin}</span>
+      <span class="badge-blue">${product.category.toUpperCase().replace('-', ' ')} • ${product.origin}</span>
       <h2 class="modal-title" style="margin-top: 10px;">${product.title}</h2>
-      <div class="modal-price">$${product.pricePerSqFt.toFixed(2)} <small>/ sq. ft.</small></div>
+      <div class="modal-price">$${product.pricePerSqFt.toFixed(2)} <small>${product.unitLabel || '/ sq. ft.'}</small></div>
       <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px;">${product.description}</p>
       
-      <h4 style="color: var(--accent-gold-light); font-size: 0.95rem; margin-bottom: 8px;">Technical Specifications</h4>
+      <h4 style="color: var(--dark-blue); font-size: 0.95rem; margin-bottom: 8px;">Product Specifications Sheet</h4>
       <table class="specs-table">
-        <tr><td>Origin Quarry:</td><td>${product.origin}</td></tr>
-        <tr><td>Finish Type:</td><td>${product.finish}</td></tr>
-        <tr><td>Standard Thickness:</td><td>${product.thickness}</td></tr>
-        <tr><td>Available Formats:</td><td>${product.sizes}</td></tr>
-        <tr><td>Water Absorption:</td><td>${product.waterAbsorption}</td></tr>
+        <tr><td>Brand / Origin:</td><td>${product.origin}</td></tr>
+        <tr><td>Finish / Form:</td><td>${product.finish}</td></tr>
+        <tr><td>Container / Spec:</td><td>${product.thickness}</td></tr>
+        <tr><td>Packaging Formats:</td><td>${product.sizes}</td></tr>
+        <tr><td>Water & Chemical Resistance:</td><td>${product.waterAbsorption}</td></tr>
         <tr><td>Recommended Use:</td><td>${product.recommendedUse}</td></tr>
       </table>
 
       <div style="display: flex; gap: 12px; margin-top: 24px;">
-        <button class="btn-primary" style="flex: 1;" onclick="addToSampleCart('${product.id}'); closeModal();">
-          🎁 Request Physical Sample Box
-        </button>
-        <button class="btn-outline" onclick="closeModal(); scrollToQuote('${product.title}')">
-          💬 Inquiry Direct Quote
+        <button class="btn-primary" style="flex: 1;" onclick="addToQuoteCart('${product.id}'); closeModal();">
+          🛒 Add to Bema Stone Quote Tray
         </button>
       </div>
     </div>
@@ -301,106 +438,6 @@ function closeModal() {
   if (modal) modal.classList.remove('active');
 }
 
-// Sample Cart Drawer Management
-function addToSampleCart(productId) {
-  const product = PRODUCTS.find(p => p.id === productId);
-  if (!product) return;
-
-  if (sampleCart.some(item => item.id === productId)) {
-    showToast('💡 Product sample is already in your request box!');
-  } else {
-    sampleCart.push(product);
-    updateCartUI();
-    showToast(`📦 Added "${product.title}" sample to your box!`);
-  }
-}
-
-function removeFromSampleCart(productId) {
-  sampleCart = sampleCart.filter(item => item.id !== productId);
-  updateCartUI();
-}
-
-function updateCartUI() {
-  const badge = document.getElementById('cartBadge');
-  const drawerItems = document.getElementById('drawerItems');
-  if (badge) badge.innerText = sampleCart.length;
-
-  if (drawerItems) {
-    if (sampleCart.length === 0) {
-      drawerItems.innerHTML = `
-        <div style="text-align: center; padding: 40px 10px; color: var(--text-dim);">
-          <p>Your sample box is currently empty.</p>
-          <p style="font-size: 0.8rem; margin-top: 6px;">Select up to 4 complimentary stone samples with free nationwide express courier!</p>
-        </div>
-      `;
-    } else {
-      drawerItems.innerHTML = sampleCart.map(item => `
-        <div class="drawer-item">
-          <img src="${item.image}" alt="${item.title}">
-          <div class="drawer-item-info" style="flex: 1;">
-            <h4>${item.title}</h4>
-            <p>${item.finish} • ${item.category}</p>
-          </div>
-          <button style="background:none; border:none; color:#ff6b6b; cursor:pointer;" onclick="removeFromSampleCart('${item.id}')">✕</button>
-        </div>
-      `).join('');
-    }
-  }
-}
-
-function toggleDrawer() {
-  const drawer = document.getElementById('sampleDrawer');
-  const overlay = document.getElementById('drawerOverlay');
-  if (drawer && overlay) {
-    drawer.classList.toggle('active');
-    overlay.classList.toggle('active');
-  }
-}
-
-function submitSampleRequest() {
-  if (sampleCart.length === 0) {
-    showToast('⚠️ Please select at least 1 stone sample before submitting.');
-    return;
-  }
-  showToast('🚀 Sample Request Submitted! Your physical stone sample box will ship within 24 hours.');
-  sampleCart = [];
-  updateCartUI();
-  toggleDrawer();
-}
-
-// Surface Visualizer Switcher
-function setupVisualizer() {
-  const swatches = document.querySelectorAll('.swatch-item');
-  const previewImg = document.getElementById('visualizerImg');
-  const titleEl = document.getElementById('visualizerTitle');
-
-  swatches.forEach(swatch => {
-    swatch.addEventListener('click', () => {
-      swatches.forEach(s => s.classList.remove('active'));
-      swatch.classList.add('active');
-
-      const bg = swatch.getAttribute('data-img');
-      const name = swatch.getAttribute('data-name');
-
-      if (previewImg) previewImg.src = bg;
-      if (titleEl) titleEl.innerText = name;
-    });
-  });
-}
-
-// Scroll Helper
-function scrollToQuote(stoneName = '') {
-  const quoteSection = document.getElementById('quote-section');
-  const selectEl = document.getElementById('stoneSelect');
-  if (selectEl && stoneName) {
-    selectEl.value = stoneName;
-  }
-  if (quoteSection) {
-    quoteSection.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-// Toast notification helper
 function showToast(message) {
   let toast = document.getElementById('toast');
   if (!toast) {
