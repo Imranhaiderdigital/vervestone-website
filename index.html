@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Asma Stone LLC | Natural Stone & DAP Professional Sealants</title>
   <meta name="description" content="Direct factory supplier of Italian marble, travertine pavers, porcelain slabs, and professional DAP adhesives and waterproof sealants. Asma Stone LLC, Tampa FL.">
   
@@ -10,16 +10,16 @@
 </head>
 <body>
 
-  <!-- Top Announcement Bar - Deep Navy -->
+  <!-- Top Announcement Bar - Mobile Responsive -->
   <div class="top-bar">
     <div class="top-bar-left">
       <span>📞 +1 (818) 659-0306</span>
       <span>✉️ asmabatoolllc@gmail.com</span>
-      <span>📍 4902 W Rio Vista Ave, Tampa, FL 33634, USA</span>
+      <span>📍 Tampa, FL 33634, USA</span>
     </div>
     <div class="top-bar-right">
-      <span class="badge-blue">⚡ Asma Stone LLC Direct Quarry Systems</span>
-      <span>Currency: <strong>USD ($)</strong></span>
+      <span class="badge-blue">⚡ Direct Quarry Supplier</span>
+      <span><strong>USD ($)</strong></span>
     </div>
   </div>
 
@@ -31,6 +31,7 @@
         <div class="brand-name">ASMA<span>STONE</span> LLC</div>
       </a>
 
+      <!-- Desktop Nav Links -->
       <ul class="nav-links">
         <li><a href="#hero" class="active">Home</a></li>
         <li><a href="#categories">Categories</a></li>
@@ -41,21 +42,49 @@
       <div class="nav-actions">
         <div class="search-box">
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="searchInput" placeholder="Search Calacatta, DAP Alex...">
+          <input type="text" id="searchInput" placeholder="Search...">
         </div>
 
         <!-- Asma Stone Quote Cart Button -->
         <button class="cart-btn" onclick="toggleDrawer()">
-          🛒 Quote Tray
+          🛒
           <span class="cart-badge" id="cartBadge">0</span>
         </button>
 
-        <button class="btn-primary" onclick="scrollToQuote()">Get Quote</button>
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileNav()" aria-label="Toggle Mobile Menu">
+          ☰
+        </button>
+
+        <button class="btn-primary desktop-only" onclick="scrollToQuote()" style="display: none;">Get Quote</button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section - Clean Blue & White -->
+  <!-- Mobile Navigation Drawer Overlay & Menu -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="toggleMobileNav()"></div>
+  <div class="mobile-nav-menu" id="mobileNavMenu">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <div class="logo-icon">A</div>
+        <div class="brand-name">ASMA<span>STONE</span></div>
+      </div>
+      <button style="background:none; border:none; font-size:1.5rem; cursor:pointer;" onclick="toggleMobileNav()">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" onclick="toggleMobileNav()">🏠 Home</a></li>
+      <li><a href="#categories" onclick="toggleMobileNav()">📑 Categories</a></li>
+      <li><a href="#catalog" onclick="toggleMobileNav()">🏛️ Product Catalog</a></li>
+      <li><a href="#quote-section" onclick="toggleMobileNav()">✉️ Request Quote</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-light);">
+      <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 10px;"><strong>Contact Direct:</strong></p>
+      <p style="font-size: 0.82rem; color: var(--navy-dark);">📞 +1 (818) 659-0306</p>
+      <p style="font-size: 0.82rem; color: var(--navy-dark);">✉️ asmabatoolllc@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero-content">
       <div class="hero-tag">✨ Asma Stone LLC • Quarry Direct Natural Surfaces</div>
@@ -66,7 +95,7 @@
 
       <div class="hero-cta">
         <a href="#catalog" class="btn-primary">Browse Stone & DAP Catalog →</a>
-        <button class="btn-outline" onclick="toggleDrawer()">🛒 View Asma Stone Quote Tray</button>
+        <button class="btn-outline" onclick="toggleDrawer()">🛒 View Quote Tray</button>
       </div>
 
       <div class="hero-stats">
@@ -186,17 +215,17 @@
           Submit your required stone area (Sq. Ft.) or DAP adhesive tube quantities for an instant, direct factory quote with freight estimation.
         </p>
 
-        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 14px; background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid var(--border-light);">
-          <div style="display:flex; align-items:center; gap:12px;">
-            <span style="font-size:1.3rem;">📍</span>
+        <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px; background: #ffffff; padding: 18px; border-radius: 12px; border: 1px solid var(--border-light);">
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.9rem;">
+            <span style="font-size:1.2rem;">📍</span>
             <div><strong>Address:</strong> 4902 W Rio Vista Ave, Tampa, FL 33634, USA</div>
           </div>
-          <div style="display:flex; align-items:center; gap:12px;">
-            <span style="font-size:1.3rem;">📞</span>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.9rem;">
+            <span style="font-size:1.2rem;">📞</span>
             <div><strong>Phone:</strong> +1 (818) 659-0306</div>
           </div>
-          <div style="display:flex; align-items:center; gap:12px;">
-            <span style="font-size:1.3rem;">✉️</span>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.9rem;">
+            <span style="font-size:1.2rem;">✉️</span>
             <div><strong>Email:</strong> asmabatoolllc@gmail.com</div>
           </div>
         </div>
@@ -249,7 +278,7 @@
       <p>Est. Total: <strong id="bottomTotal" style="color:var(--sky-light); font-size:1rem; margin-left:6px;">$0.00</strong></p>
     </div>
     <button class="btn-primary" onclick="toggleDrawer()">
-      Review Quote Tray (<span id="bottomCartBadge">0</span>) →
+      Quote Tray (<span id="bottomCartBadge">0</span>) →
     </button>
   </div>
 
@@ -278,7 +307,7 @@
         <strong id="cartEstTotal" style="color:var(--bema-blue);">$0.00</strong>
       </div>
 
-      <div style="margin-top: 16px; display:flex; flex-direction:column; gap:10px;">
+      <div style="margin-top: 14px; display:flex; flex-direction:column; gap:10px;">
         <input type="text" id="drawerCustName" placeholder="Your Name" style="padding:10px; border-radius:6px; border:1px solid var(--border-color);">
         <input type="email" id="drawerCustEmail" placeholder="Your Email Address" style="padding:10px; border-radius:6px; border:1px solid var(--border-color);">
         <button class="btn-primary" style="width:100%; margin-top:4px;" onclick="submitQuoteTrayRequest()">
@@ -342,7 +371,7 @@
 
     <div class="footer-bottom">
       <p>© 2026 Asma Stone LLC. All rights reserved.</p>
-      <p>Clean Blue & White Theme | Bema Stone Cart Integration</p>
+      <p>100% Mobile Optimized | Custom Domain Ready</p>
     </div>
   </footer>
 

@@ -308,6 +308,16 @@ function setupEventListeners() {
   }
 }
 
+// Mobile Menu Navigation Toggle
+function toggleMobileNav() {
+  const menu = document.getElementById('mobileNavMenu');
+  const overlay = document.getElementById('mobileNavOverlay');
+  if (menu && overlay) {
+    menu.classList.toggle('active');
+    overlay.classList.toggle('active');
+  }
+}
+
 // ASMA STONE STYLE CART & QUOTE TRAY LOGIC
 function addToQuoteCart(productId) {
   const product = PRODUCTS.find(p => p.id === productId);
