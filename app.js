@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Asma Stone LLC & Airgoods Wholesale Store - Logic & Product Catalog
+   Asma Stone LLC & Airgoods Wholesale Store - Expanded Product Catalog
    ========================================================================== */
 
 const PRODUCTS = [
-  // AIRGOODS WHOLESALE ARTISANAL PRODUCTS (New Additions)
+  // AIRGOODS WHOLESALE ARTISANAL PRODUCTS (Expanded Catalog)
   {
     id: 'airgoods-1',
     title: 'Airgoods Ethiopia Yirgacheffe Specialty Coffee',
@@ -39,6 +39,42 @@ const PRODUCTS = [
     waterAbsorption: 'Pure Essential Oils',
     recommendedUse: 'Aromatherapy, Luxury Home Decor, Boutique Retail',
     description: 'Hand-poured 100% natural soy wax candle infused with calming eucalyptus, white sage, and warm botanical essential oils.'
+  },
+  {
+    id: 'airgoods-6',
+    title: 'Airgoods Organic Cold-Pressed Extra Virgin Olive Oil',
+    category: 'airgoods',
+    finish: 'Single Estate Cold Pressed',
+    thickness: '750ml Dark Glass Bottle',
+    pricePerSqFt: 26.50,
+    unitLabel: '/ bottle',
+    rating: 5.0,
+    image: 'images/airgoods_olive_oil.jpg',
+    badge: 'AIRGOODS PANTRY',
+    isAirgoods: true,
+    origin: 'Single Estate, Italy',
+    sizes: '750ml Glass Bottle',
+    waterAbsorption: '100% Organic EVOO',
+    recommendedUse: 'Specialty Grocers, Gourmet Kitchens, Artisanal Dipping',
+    description: 'First cold-pressed single estate Italian extra virgin olive oil with rich peppery finish and vibrant grassy notes.'
+  },
+  {
+    id: 'airgoods-7',
+    title: 'Airgoods Craft 70% Dark Chocolate w/ Sea Salt',
+    category: 'airgoods',
+    finish: 'Artisanal Small Batch Cacao',
+    thickness: '80g Bar',
+    pricePerSqFt: 8.50,
+    unitLabel: '/ bar',
+    rating: 4.9,
+    image: 'images/airgoods_chocolate.jpg',
+    badge: 'AIRGOODS CRAFT',
+    isAirgoods: true,
+    origin: 'Handcrafted Bean-to-Bar',
+    sizes: '80g (2.8 oz) Bar',
+    waterAbsorption: '70% Fair Trade Cacao',
+    recommendedUse: 'Specialty Confectionery, Boutique Gift Baskets',
+    description: 'Handcrafted bean-to-bar 70% dark chocolate studded with crunchy roasted cacao nibs and flaky Maldon sea salt.'
   },
   {
     id: 'airgoods-3',
@@ -93,6 +129,60 @@ const PRODUCTS = [
     waterAbsorption: '100% Organic Ceremonial Grade',
     recommendedUse: 'Traditional Tea Ceremony, Matcha Lattes, Wellness Cafes',
     description: 'Vibrant shade-grown ceremonial grade organic Japanese matcha powder with rich umami flavor and velvety smoothness.'
+  },
+  {
+    id: 'airgoods-8',
+    title: 'Airgoods Botanical Rosehip & Squalane Facial Oil',
+    category: 'airgoods',
+    finish: 'Cold Pressed Botanical Oil',
+    thickness: '50ml Dropper Bottle',
+    pricePerSqFt: 34.00,
+    unitLabel: '/ bottle',
+    rating: 4.9,
+    image: 'images/airgoods_face_oil.jpg',
+    badge: 'AIRGOODS WELLNESS',
+    isAirgoods: true,
+    origin: 'Clean Beauty Lab, USA',
+    sizes: '50ml Glass Dropper',
+    waterAbsorption: '100% Vegan & Cruelty Free',
+    recommendedUse: 'Personal Care, Clean Beauty Boutiques, Spa Retail',
+    description: 'Nourishing botanical facial serum oil infused with cold-pressed organic rosehip, plant squalane, and vitamin E.'
+  },
+  {
+    id: 'airgoods-9',
+    title: 'Airgoods Artisanal Maple Pecan Crunch Granola',
+    category: 'airgoods',
+    finish: 'Small Batch Roasted',
+    thickness: '14 oz Pouched Bag',
+    pricePerSqFt: 11.50,
+    unitLabel: '/ bag',
+    rating: 4.8,
+    image: 'images/airgoods_granola.jpg',
+    badge: 'AIRGOODS PANTRY',
+    isAirgoods: true,
+    origin: 'Artisanal Bakery, USA',
+    sizes: '14 oz Resealable Bag',
+    waterAbsorption: 'Gluten-Free & Non-GMO',
+    recommendedUse: 'Specialty Breakfast, Gourmet Snack, Parfait Topping',
+    description: 'Slow-roasted gluten-free oats clusters with pure Vermont maple syrup, toasted pecans, and sea salt.'
+  },
+  {
+    id: 'airgoods-10',
+    title: 'Airgoods Vanilla Bean Craft Syrup for Coffee',
+    category: 'airgoods',
+    finish: 'Organic Cane & Real Vanilla',
+    thickness: '375ml Glass Bottle',
+    pricePerSqFt: 16.00,
+    unitLabel: '/ bottle',
+    rating: 4.9,
+    image: 'images/airgoods_syrup.jpg',
+    badge: 'AIRGOODS CRAFT',
+    isAirgoods: true,
+    origin: 'Craft Syrups Co',
+    sizes: '375ml Bottle',
+    waterAbsorption: 'Real Madagascar Vanilla',
+    recommendedUse: 'Coffee Bars, Espresso Drinks, Artisanal Cocktails',
+    description: 'Small-batch craft simple syrup infused with real Madagascar bourbon vanilla bean specks.'
   },
 
   // DAP PRODUCTS (Official Caulks & Sealants)
@@ -230,7 +320,7 @@ function renderCatalog() {
       <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-dim);">
         <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 16px; color: var(--bema-blue);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <h3>No matching items found</h3>
-        <p style="margin-top: 8px;">Try searching for "Airgoods", "Coffee", "DAP" or "Marble".</p>
+        <p style="margin-top: 8px;">Try searching for "Airgoods", "Olive Oil", "Chocolate" or "DAP".</p>
       </div>
     `;
     return;
