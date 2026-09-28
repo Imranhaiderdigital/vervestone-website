@@ -1,6 +1,5 @@
 /* ==========================================================================
-   Asma Stone LLC - 100% Mobile Glitch-Free Responsive Stylesheet
-   Zero Horizontal Scroll • Perfect Mobile Viewports (320px - 768px)
+   Asma Stone LLC & Airgoods Wholesale Store - 100% Mobile Glitch-Free Theme
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
@@ -17,6 +16,7 @@
   --ice-blue: #f0f6ff;
   --sky-light: #e0edff;
   --dap-red: #c2410c;
+  --airgoods-green: #059669;
   
   --text-dark: #0f172a;
   --text-dim: #334155;
@@ -58,7 +58,7 @@ body {
   background-color: var(--bg-body);
   color: var(--text-dark);
   line-height: 1.5;
-  padding-bottom: 70px; /* Reserved space for sticky bottom bar */
+  padding-bottom: 70px;
 }
 
 a {
@@ -610,7 +610,7 @@ header {
   min-width: 130px;
 }
 
-/* Product Cards Grid - Zero Glitch Sizing */
+/* Product Cards Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -657,6 +657,10 @@ header {
 
 .dap-tag {
   background: var(--dap-red) !important;
+}
+
+.airgoods-tag {
+  background: var(--airgoods-green) !important; /* Airgoods Wholesale Emerald Tag */
 }
 
 .product-quick-view {
@@ -1168,10 +1172,7 @@ footer {
   gap: 8px;
 }
 
-/* ==========================================================================
-   MOBILE & TABLET RESPONSIVE OVERRIDES (STRICT GLITCH FIX)
-   ========================================================================== */
-
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1024px) {
   .quote-section {
     grid-template-columns: 1fr;
@@ -1191,32 +1192,24 @@ footer {
   .mobile-toggle {
     display: flex !important;
   }
-  
-  /* Search box in header collapses cleanly */
   .search-box {
-    display: none; /* Hide header search box on small screens to prevent header overflow */
+    display: none;
   }
-
   .product-grid {
     grid-template-columns: 1fr !important;
-    width: 100% !important;
   }
-
   .categories-grid {
     grid-template-columns: 1fr 1fr !important;
   }
-
   .form-grid {
     grid-template-columns: 1fr !important;
   }
   .form-group.full-width {
     grid-column: span 1 !important;
   }
-
   .footer-grid {
     grid-template-columns: 1fr !important;
   }
-
   .top-bar-left span:nth-child(3) {
     display: none !important;
   }
@@ -1233,11 +1226,9 @@ footer {
   .top-bar-right {
     display: none;
   }
-
   .nav-container {
     padding: 10px 12px;
   }
-
   .brand-name {
     font-size: 1.15rem;
   }
@@ -1246,21 +1237,17 @@ footer {
     height: 32px;
     font-size: 1.1rem;
   }
-
   .categories-grid {
     grid-template-columns: 1fr !important;
   }
-
   .hero-stats {
     grid-template-columns: 1fr 1fr !important;
     padding: 12px;
     gap: 10px;
   }
-
   .stat-item h3 {
     font-size: 1.4rem;
   }
-
   .modal-body {
     padding: 16px;
     gap: 14px;

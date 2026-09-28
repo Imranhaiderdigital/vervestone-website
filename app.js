@@ -1,113 +1,101 @@
 /* ==========================================================================
-   Asma Stone LLC & DAP Professional Surfaces - Logic & Quote Tray
+   Asma Stone LLC & Airgoods Wholesale Store - Logic & Product Catalog
    ========================================================================== */
 
 const PRODUCTS = [
-  // Natural Stone & Marble Products (Bema Stone Style)
+  // AIRGOODS WHOLESALE ARTISANAL PRODUCTS (New Additions)
   {
-    id: 'prod-1',
-    title: 'Calacatta Gold Sovereign Marble',
-    category: 'marble',
-    finish: 'Honed',
-    thickness: '3/4" (20mm)',
-    pricePerSqFt: 24.50,
-    unitLabel: '/ sq. ft.',
-    rating: 4.9,
-    image: 'images/marble_calacatta.jpg',
-    badge: 'ASMA SELECT',
-    origin: 'Carrara, Italy',
-    sizes: '24"x24", 12"x24", Slabs',
-    waterAbsorption: '0.12%',
-    recommendedUse: 'Interior Floors, Accent Walls, Bathroom Vanities',
-    description: 'Ultra-luxurious Italian marble with luminous warm white base and golden-grey veining.'
-  },
-  {
-    id: 'prod-2',
-    title: 'Silver Vein-Cut Travertine Pavers',
-    category: 'travertine',
-    finish: 'Brushed & Filled',
-    thickness: '1/2" (12mm)',
-    pricePerSqFt: 14.80,
-    unitLabel: '/ sq. ft.',
-    rating: 4.8,
-    image: 'images/travertine_silver.jpg',
-    badge: 'POPULAR',
-    origin: 'Denizli, Turkey',
-    sizes: '12"x24", 16"x24", French Pattern',
-    waterAbsorption: '0.45%',
-    recommendedUse: 'Indoor Flooring, Pool Decks, Feature Walls',
-    description: 'Sleek contemporary natural travertine featuring linear slate grey and taupe strata.'
-  },
-  {
-    id: 'prod-3',
-    title: 'Nero Marquina Black Marble',
-    category: 'marble',
-    finish: 'Polished High Gloss',
-    thickness: '3/4" (20mm)',
-    pricePerSqFt: 22.00,
-    unitLabel: '/ sq. ft.',
-    rating: 5.0,
-    image: 'images/nero_marquina.jpg',
-    badge: 'LUXURY',
-    origin: 'Markina, Spain',
-    sizes: '24"x24", 18"x18", Slabs',
-    waterAbsorption: '0.18%',
-    recommendedUse: 'Fireplace Surround, Foyer Flooring, Kitchen Countertops',
-    description: 'Dramatic velvet black Spanish marble punctuated with stark white calcite veins.'
-  },
-  {
-    id: 'prod-4',
-    title: 'Statuario Imperial Porcelain Slab',
-    category: 'porcelain',
-    finish: 'Matte Soft Velvet',
-    thickness: '1/4" (6mm)',
-    pricePerSqFt: 11.90,
-    unitLabel: '/ sq. ft.',
-    rating: 4.7,
-    image: 'images/porcelain_statuario.jpg',
-    badge: 'SLAB FORMAT',
-    origin: 'Modena, Italy',
-    sizes: '48"x96", 32"x64"',
-    waterAbsorption: '0.05%',
-    recommendedUse: 'Showers, Wall Cladding, Commercial',
-    description: 'Ultra-durable large format porcelain slab replicating rare Statuario marble with zero maintenance.'
-  },
-  {
-    id: 'prod-5',
-    title: 'Carrara & Brass Herringbone Mosaic',
-    category: 'mosaics',
-    finish: 'Polished',
-    thickness: '3/8" (10mm)',
+    id: 'airgoods-1',
+    title: 'Airgoods Ethiopia Yirgacheffe Specialty Coffee',
+    category: 'airgoods',
+    finish: 'Single-Origin Medium Roast',
+    thickness: '12 oz (340g) Whole Bean Bag',
     pricePerSqFt: 18.50,
-    unitLabel: '/ sq. ft.',
-    rating: 4.9,
-    image: 'images/mosaic_herringbone.jpg',
-    badge: 'WATERJET',
-    origin: 'Artisan Crafted',
-    sizes: '12"x12" Mesh Sheet',
-    waterAbsorption: '0.15%',
-    recommendedUse: 'Kitchen Backsplash, Shower Niche, Accent Border',
-    description: 'Precision waterjet herringbone mosaic featuring white Carrara marble intertwined with brushed brass inlay.'
+    unitLabel: '/ bag',
+    rating: 5.0,
+    image: 'images/airgoods_coffee.jpg',
+    badge: 'AIRGOODS BESTSELLER',
+    isAirgoods: true,
+    origin: 'Direct Trade, Ethiopia',
+    sizes: '12 oz Bag, 5 lb Wholesale Pack',
+    waterAbsorption: '100% Organic Specialty',
+    recommendedUse: 'Specialty Coffee Shops, Boutique Grocers, Daily Brew',
+    description: 'Artisanal single-origin Ethiopian whole bean coffee featuring delicate floral notes of bergamot, jasmine, and sweet wild berries.'
   },
   {
-    id: 'prod-6',
-    title: 'Walnut Antique French Pattern Pavers',
-    category: 'travertine',
-    finish: 'Chiseled Tumbled',
-    thickness: '1-1/4" (30mm)',
-    pricePerSqFt: 9.75,
-    unitLabel: '/ sq. ft.',
+    id: 'airgoods-2',
+    title: 'Airgoods Botanical Eucalyptus & Sage Soy Candle',
+    category: 'airgoods',
+    finish: 'Hand-Poured Soy Wax',
+    thickness: '8 oz Amber Glass Jar',
+    pricePerSqFt: 22.00,
+    unitLabel: '/ candle',
+    rating: 4.9,
+    image: 'images/airgoods_candle.jpg',
+    badge: 'AIRGOODS BOTANICAL',
+    isAirgoods: true,
+    origin: 'Handcrafted in USA',
+    sizes: '8 oz Jar (50 hr Burn Time)',
+    waterAbsorption: 'Pure Essential Oils',
+    recommendedUse: 'Aromatherapy, Luxury Home Decor, Boutique Retail',
+    description: 'Hand-poured 100% natural soy wax candle infused with calming eucalyptus, white sage, and warm botanical essential oils.'
+  },
+  {
+    id: 'airgoods-3',
+    title: 'Airgoods Raw Wildflower Organic Honey',
+    category: 'airgoods',
+    finish: 'Unfiltered Raw Amber',
+    thickness: '16 oz Glass Jar',
+    pricePerSqFt: 14.50,
+    unitLabel: '/ jar',
+    rating: 4.9,
+    image: 'images/airgoods_honey.jpg',
+    badge: 'AIRGOODS PANTRY',
+    isAirgoods: true,
+    origin: 'Artisanal Apiary, USA',
+    sizes: '16 oz Jar',
+    waterAbsorption: '100% Pure Raw Honey',
+    recommendedUse: 'Gourmet Pantry, Tea Sweetener, Cheese Board Accent',
+    description: 'Pure, unfiltered raw wildflower honey harvested directly from independent sustainable apiaries.'
+  },
+  {
+    id: 'airgoods-4',
+    title: 'Airgoods Handcrafted Speckled Ceramic Mug Set',
+    category: 'airgoods',
+    finish: 'Artisanal Matte Glaze',
+    thickness: '14 oz Ceramic Stoneware',
+    pricePerSqFt: 24.00,
+    unitLabel: '/ 2-pack',
     rating: 4.8,
-    image: 'images/french_pattern_paver.jpg',
-    badge: 'OUTDOOR',
-    origin: 'Denizli, Turkey',
-    sizes: 'French Pattern (4 Sizes)',
-    waterAbsorption: '0.50%',
-    recommendedUse: 'Patio, Pool Deck, Courtyard Pavers',
-    description: 'Timeless Mediterranean outdoor travertine pavers with rich honey, chestnut, and walnut tones.'
+    image: 'images/airgoods_mug.jpg',
+    badge: 'AIRGOODS HOME',
+    isAirgoods: true,
+    origin: 'Stoneware Studio',
+    sizes: '14 oz Capacity',
+    waterAbsorption: 'Dishwasher & Microwave Safe',
+    recommendedUse: 'Specialty Coffee, Espresso Bars, Gift Shops',
+    description: 'Hand-thrown ceramic stoneware mugs with subtle speckled glaze, perfect for specialty coffee and botanical tea.'
+  },
+  {
+    id: 'airgoods-5',
+    title: 'Airgoods Ceremonial Organic Japanese Matcha',
+    category: 'airgoods',
+    finish: 'First Harvest Powder',
+    thickness: '100g Steel Tin',
+    pricePerSqFt: 29.00,
+    unitLabel: '/ tin',
+    rating: 5.0,
+    image: 'images/airgoods_tea.jpg',
+    badge: 'AIRGOODS TEA',
+    isAirgoods: true,
+    origin: 'Uji, Kyoto, Japan',
+    sizes: '100g Airtight Tin',
+    waterAbsorption: '100% Organic Ceremonial Grade',
+    recommendedUse: 'Traditional Tea Ceremony, Matcha Lattes, Wellness Cafes',
+    description: 'Vibrant shade-grown ceremonial grade organic Japanese matcha powder with rich umami flavor and velvety smoothness.'
   },
 
-  // DAP PRODUCTS (Official Caulks, Adhesives & Sealants)
+  // DAP PRODUCTS (Official Caulks & Sealants)
   {
     id: 'dap-1',
     title: 'DAP ALEX PLUS Acrylic Latex Caulk w/ Silicone',
@@ -162,23 +150,41 @@ const PRODUCTS = [
     recommendedUse: 'Marble Tub Surrounds, Granite Vanities, Tile Backsplashes',
     description: 'Specially formulated for kitchen and bath applications. Cures to a durable watertight seal that prevents mold growth.'
   },
+
+  // CURATED LUXURY MARBLE SURFACES
   {
-    id: 'dap-4',
-    title: 'DAP Beats The Nails Heavy Duty Stone Adhesive',
-    category: 'dap-sealants',
-    finish: 'High Tack Bond',
-    thickness: '10.3 oz Cartridge',
-    pricePerSqFt: 8.29,
-    unitLabel: '/ tube',
+    id: 'prod-1',
+    title: 'Calacatta Gold Sovereign Marble Slabs',
+    category: 'marble',
+    finish: 'Honed',
+    thickness: '3/4" (20mm)',
+    pricePerSqFt: 24.50,
+    unitLabel: '/ sq. ft.',
+    rating: 4.9,
+    image: 'images/marble_calacatta.jpg',
+    badge: 'ASMA MARBLE',
+    origin: 'Carrara, Italy',
+    sizes: '24"x24", 12"x24", Slabs',
+    waterAbsorption: '0.12%',
+    recommendedUse: 'Interior Floors, Accent Walls, Bathroom Vanities',
+    description: 'Ultra-luxurious Italian marble with luminous warm white base and golden-grey veining.'
+  },
+  {
+    id: 'prod-3',
+    title: 'Nero Marquina Black Marble Slabs',
+    category: 'marble',
+    finish: 'Polished High Gloss',
+    thickness: '3/4" (20mm)',
+    pricePerSqFt: 22.00,
+    unitLabel: '/ sq. ft.',
     rating: 5.0,
-    image: 'images/dap_sealant.jpg',
-    badge: 'DAP STONE BOND',
-    isDap: true,
-    origin: 'DAP Products Inc, USA',
-    sizes: '10.3 fl oz Cartridge',
-    waterAbsorption: 'Weatherproof Grab',
-    recommendedUse: 'Heavy Marble Wall Cladding, Travertine Paver Bonding',
-    description: 'Professional grade high-strength construction adhesive specifically formulated to bond heavy natural stone slabs and tiles.'
+    image: 'images/nero_marquina.jpg',
+    badge: 'LUXURY MARBLE',
+    origin: 'Markina, Spain',
+    sizes: '24"x24", 18"x18", Slabs',
+    waterAbsorption: '0.18%',
+    recommendedUse: 'Fireplace Surround, Foyer Flooring, Kitchen Countertops',
+    description: 'Dramatic velvet black Spanish marble punctuated with stark white calcite veins.'
   }
 ];
 
@@ -217,14 +223,14 @@ function renderCatalog() {
     filtered.sort((a, b) => b.rating - a.rating);
   }
 
-  if (countEl) countEl.innerText = `${filtered.length} Natural Stone & DAP Products Available`;
+  if (countEl) countEl.innerText = `${filtered.length} Airgoods & Asma Products Available`;
 
   if (filtered.length === 0) {
     grid.innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-dim);">
         <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 16px; color: var(--bema-blue);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <h3>No matching items found</h3>
-        <p style="margin-top: 8px;">Try searching for "DAP", "Marble" or "Travertine".</p>
+        <p style="margin-top: 8px;">Try searching for "Airgoods", "Coffee", "DAP" or "Marble".</p>
       </div>
     `;
     return;
@@ -234,7 +240,7 @@ function renderCatalog() {
     <div class="product-card" data-id="${product.id}">
       <div class="product-thumb">
         <img src="${product.image}" alt="${product.title}" loading="lazy">
-        <span class="product-tag ${product.isDap ? 'dap-tag' : ''}">${product.badge || 'ASMA SELECT'}</span>
+        <span class="product-tag ${product.isAirgoods ? 'airgoods-tag' : product.isDap ? 'dap-tag' : ''}">${product.badge || 'ASMA SELECT'}</span>
         <div class="product-quick-view">
           <button onclick="openProductModal('${product.id}')">🔍 Quick View & Technical Specs</button>
         </div>
@@ -254,7 +260,7 @@ function renderCatalog() {
             $${product.pricePerSqFt.toFixed(2)} <small>${product.unitLabel || '/ sq ft'}</small>
           </div>
           <button class="btn-add-quote" onclick="addToQuoteCart('${product.id}')">
-            🛒 + Quote Tray
+            🛒 + Order Tray
           </button>
         </div>
       </div>
@@ -302,7 +308,7 @@ function setupEventListeners() {
   if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      showToast('✨ Thank you! Your Asma Stone LLC project quote request has been submitted. Our team will contact you within 2 hours.');
+      showToast('✨ Thank you! Your Asma Stone & Airgoods order inquiry has been submitted. Our team will contact you shortly.');
       quoteForm.reset();
     });
   }
@@ -334,7 +340,7 @@ function addToQuoteCart(productId) {
   }
   updateCartUI();
   toggleDrawer(true);
-  showToast(`🛒 Added "${product.title}" to Asma Stone LLC Quote Tray!`);
+  showToast(`🛒 Added "${product.title}" to Order Tray!`);
 }
 
 function updateCartQuantity(productId, delta) {
@@ -371,8 +377,8 @@ function updateCartUI() {
       drawerItems.innerHTML = `
         <div style="text-align: center; padding: 50px 10px; color: var(--text-dim);">
           <svg width="50" height="50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 12px; color: var(--bema-blue);"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-          <h4 style="color: var(--navy-dark);">Your Asma Stone LLC Quote Tray is Empty</h4>
-          <p style="font-size: 0.85rem; margin-top: 6px;">Add natural stone tiles or DAP caulks/adhesives to request a direct factory quote.</p>
+          <h4 style="color: var(--navy-dark);">Your Order Tray is Empty</h4>
+          <p style="font-size: 0.85rem; margin-top: 6px;">Add Airgoods wholesale items, DAP sealants, or Italian marble to request a quote.</p>
         </div>
       `;
     } else {
@@ -413,19 +419,19 @@ function toggleDrawer(forceOpen = false) {
 
 function submitQuoteTrayRequest() {
   if (cartItems.length === 0) {
-    showToast('⚠️ Please add at least 1 product to your quote tray.');
+    showToast('⚠️ Please add at least 1 product to your order tray.');
     return;
   }
   const name = document.getElementById('drawerCustName')?.value || 'Valued Customer';
   const email = document.getElementById('drawerCustEmail')?.value || 'asmabatoolllc@gmail.com';
   
-  showToast(`🚀 Official Quote Request Submitted for ${name}! Details sent to ${email}.`);
+  showToast(`🚀 Official Order Request Submitted for ${name}! Confirmation sent to ${email}.`);
   cartItems = [];
   updateCartUI();
   toggleDrawer();
 }
 
-// Product Spec Modal Popup
+// Product Spec Detail Modal Popup
 function openProductModal(productId) {
   const product = PRODUCTS.find(p => p.id === productId);
   if (!product) return;
@@ -447,16 +453,16 @@ function openProductModal(productId) {
       <h4 style="color: var(--navy-dark); font-size: 0.95rem; margin-bottom: 8px;">Technical Specification Sheet</h4>
       <table class="specs-table">
         <tr><td>Origin / Brand:</td><td>${product.origin}</td></tr>
-        <tr><td>Finish / Form:</td><td>${product.finish}</td></tr>
+        <tr><td>Type / Form:</td><td>${product.finish}</td></tr>
         <tr><td>Container / Spec:</td><td>${product.thickness}</td></tr>
-        <tr><td>Available Formats:</td><td>${product.sizes}</td></tr>
-        <tr><td>Water / Mildew Resistance:</td><td>${product.waterAbsorption}</td></tr>
+        <tr><td>Packaging Formats:</td><td>${product.sizes}</td></tr>
+        <tr><td>Purity / Rating:</td><td>${product.waterAbsorption}</td></tr>
         <tr><td>Recommended Usage:</td><td>${product.recommendedUse}</td></tr>
       </table>
 
       <div style="display: flex; gap: 12px; margin-top: 24px;">
         <button class="btn-primary" style="flex: 1;" onclick="addToQuoteCart('${product.id}'); closeModal();">
-          🛒 Add to Asma Stone LLC Quote Tray
+          🛒 Add to Order Tray
         </button>
       </div>
     </div>
